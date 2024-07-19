@@ -1,6 +1,22 @@
 let start = Date.now()
 
+import { lista } from "./dependencies.js"
+
+lista.run((node) => {
+    console.log(node.getValue())
+} )
+
+lista.radixSort();
+console.log("Separador con Radix");
+
+lista.run((node) => {
+    console.log(node.getValue())
+} )
+
+
 let root = document.getElementById("list-bussines")
+
+/*
 fetch("./controllers/bussines.json")
 .then(response => response.json())
 .then(data => {
@@ -12,6 +28,7 @@ fetch("./controllers/bussines.json")
     }
 })
 .catch(err => console.log(err))
+*/
 
 let end = Date.now()
 
